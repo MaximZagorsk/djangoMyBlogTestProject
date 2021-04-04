@@ -32,4 +32,11 @@
             <p><input type="submit" value="Add comment"></p>
         </form>
     {% endif %}
+    <h2>Similar posts</h2>
+    {% for similar_post in similar_posts %}
+        <h3><a href="{{ similar_post.get_absolute_url }}">
+            {{ similar_post.title }}
+        </a>
+        </h3>
+    {% endfor %}
 {% endblock %}
